@@ -22,18 +22,19 @@ def main_menu():
 def trees():
     print("Welcome to Tracy's Tall Trees!")
     print("Due to the shipment problems, all we have in stock are leftover Christmas trees.")
-    a = np.array([[1,2,3],[3,4,5],[7,8,9]])
+    a = np.array([[1, 2, 3], [3, 4, 5], [7, 8, 9]])
 
     for line in a:
-        print ('  '.join(map(str, line)))
+        print('  '.join(map(str, line)))
 
     treeHeight = int(input("How tall would you like your Christmas Tree to be?"))
     christmasTree(treeHeight)
     print("Thanks for shopping with us, bye!")
     exit()
 
+
 def christmasTree(n):
-    z = n-1
+    z = n - 1
     x = 1
     for i in range(0, n):
         for i in range(0, z):
@@ -42,9 +43,10 @@ def christmasTree(n):
             print('+', end='')
         for i in range(0, z):
             print(' ', end='')
-        x = x+2
-        z = z-1
+        x = x + 2
+        z = z - 1
         print()
+
 
 # menu option 2
 def cafe():
@@ -54,13 +56,13 @@ def cafe():
     runSubOptions()
 
 
-
 submenu_options = {
     1: "Coffee",
     2: "Cake",
     3: "Tea",
     4: "Exit",
 }
+
 
 def coffee():
     print("One hot cup of coffee coming up!")
@@ -71,7 +73,7 @@ def coffee():
         hashes = width * percent // 100
         blanks = width - hashes
 
-        print('\r[', hashes*'#', blanks*' ', ']', f' {percent:.0f}%', sep='',
+        print('\r[', hashes * '#', blanks * ' ', ']', f' {percent:.0f}%', sep='',
               end='', flush=True)
 
     print('This will take a moment')
@@ -84,11 +86,32 @@ def coffee():
     print("Your coffee is ready! Enjoy!")
     exit()
 
+
 def cake():
-    print("")
+    print("I'll let you bargain for the cake. How much do you want to pay?")
+    x = 0
+    y = "cake"
+    print("You have: {}".format(x))
+    print("Tracy has: {}".format(y))
+
+    x = int(input("Your offer:"))
+
+    if x < 25:
+        print("No way. Goodbye")
+        exit()
+    else:
+        temp = x
+        x = y
+        y = temp
+
+    print("You get: {}".format(x))
+    print("Tracy gets: {}".format(y), "dollars")
+    exit()
+
 
 def tea():
     print("")
+
 
 def runSubOptions():
     while True:
@@ -108,6 +131,8 @@ def runSubOptions():
                 print('Invalid option. Please enter a number between 1 and 4.')
         except ValueError:
             print('Invalid input. Please enter an integer input.')
+
+
 # menu option 3
 def ships():
     print("Welcome to Suzanne's Ships!")
@@ -131,7 +156,6 @@ def ships():
                 print("\n\n\n\n")
                 print(OCEAN_COLOR + "  " * 35)
 
-
             # print ship with colors and leading spaces
             def ship_print(position):
                 print(ANSI_HOME_CURSOR)
@@ -143,7 +167,6 @@ def ships():
                 print(sp + "\__ |__/ ")
                 print(sp + " \____/  ")
                 print(RESET_COLOR)
-
 
             # ship function, iterface into this file
             def ship():
@@ -159,6 +182,7 @@ def ships():
                 for position in range(start, distance, step):
                     ship_print(position)  # call to function with parameter
                     time.sleep(.1)
+
             ship()
             exit()
         elif answer2 == "no":
@@ -166,6 +190,7 @@ def ships():
             exit()
         else:
             print("Please enter yes or no.")
+
     elif answer == "no":
         print("Goodbye")
         exit()
