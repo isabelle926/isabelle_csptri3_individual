@@ -1,7 +1,7 @@
 # Isabelle's personal repository for trimester 3 of CSP
 
 ## Tri 3 TPT 0.1 related to Beneficial and Harmful Effects of Computing Big Idea 5.1
-### [5.1 Notes Here](https://docs.google.com/document/d/1kQbh1VdSiUpJkbDKV9SwbjAjB1ji_1PBo8F3Nbozk_o/edit)
+### [5.1 Notes Here](tpt/5_1notes)
 ### Action 1: Come up with three of your own Beneficial and corresponding Harmful Effects of Computing
 #### Benefits:
 - Computing can be used to make people's lives easier
