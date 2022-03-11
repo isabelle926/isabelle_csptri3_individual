@@ -51,12 +51,12 @@ def christmasTree(n):
 # menu option 2
 def cafe():
     print("Welcome to Cathy's Café!")
-    for key in submenu_options.keys():
-        print(key, '--', submenu_options[key])
-    runSubOptions()
+    for key in cafemenu_options.keys():
+        print(key, '--', cafemenu_options[key])
+    runCafeOptions()
 
 
-submenu_options = {
+cafemenu_options = {
     1: "Coffee",
     2: "Cake",
     3: "Tea",
@@ -113,7 +113,7 @@ def tea():
     print("")
 
 
-def runSubOptions():
+def runCafeOptions():
     while True:
         try:
             option = int(input("What would you like to get?"))
