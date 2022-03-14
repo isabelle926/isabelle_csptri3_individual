@@ -1,5 +1,5 @@
 # Isabelle's personal repository for trimester 3 of CSP
-
+### [Week 0 Review Ticket](https://github.com/isabelle926/isabelle_csptri3_individual/issues/1)
 ## Week 0 TT:
 - Code runs in the style of a text adventure, and uses menus, submenus, as well as other specified functions in order to interact with user response. 
 - ![image](https://user-images.githubusercontent.com/70926137/158247557-63570c15-37c5-4add-b354-735c4abb91b0.png)
