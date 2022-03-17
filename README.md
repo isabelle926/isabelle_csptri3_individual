@@ -1,12 +1,17 @@
 # Isabelle's personal repository for trimester 3 of CSP
+
+### Tangibles
+
+| Role  | Scrum Board Tasks  | Commits  |  Runtime |
+|---|---|---|---|
+| Design Manager  | [Link](https://github.com/Reem57/n224-too/projects/1?card_filter_query=assignee%3Aisabelle926)  | [Link to Commits](https://github.com/Reem57/n224-too/commits?author=isabelle926)  |  [Repl Link](https://replit.com/@IsabelleGunawa1/isabellecsptri3individual) |
+
 ### [Week 0 Review Ticket](https://github.com/isabelle926/isabelle_csptri3_individual/issues/1)
-## Week 0 TT:
-- Code runs in the style of a text adventure, and uses menus, submenus, as well as other specified functions in order to interact with user response. 
-- ![image](https://user-images.githubusercontent.com/70926137/158247557-63570c15-37c5-4add-b354-735c4abb91b0.png)
-<iframe width="100%" height="600px" src="https://replit.com/@IsabelleGunawa1/pythonmenu"></iframe>
 
+## Replit Runtime:
 
-[Isabelle's Create Task](create_task)
+<iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@IsabelleGunawa1/isabellecsptri3individual?embed=true"></iframe>
+
 ## Tri 3 TPT 0.1 related to Beneficial and Harmful Effects of Computing Big Idea 5.1
 ### [5.1 Notes Here](tpt/5_1notes)
 ### Action 1: Come up with three of your own Beneficial and corresponding Harmful Effects of Computing
