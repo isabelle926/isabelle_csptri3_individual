@@ -7,6 +7,7 @@
 | Design Manager  | [Link](https://github.com/Reem57/n224-too/projects/1?card_filter_query=assignee%3Aisabelle926)  | [Link to Commits](https://github.com/Reem57/n224-too/commits?author=isabelle926)  |  [Repl Link](https://replit.com/@IsabelleGunawa1/isabellecsptri3individual) |
 
 ### [Week 0 Review Ticket](https://github.com/isabelle926/isabelle_csptri3_individual/issues/1)
+### [Week 1 Review Ticket](https://github.com/isabelle926/isabelle_csptri3_individual/issues/2)
 
 ## Replit Runtime:
 
