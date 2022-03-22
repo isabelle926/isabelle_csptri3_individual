@@ -1,6 +1,7 @@
 import numpy as np
 from time import sleep
 import time
+from lists_dictionaries import InfoDb, for_loop, while_loop, recursive_loop, fibonacci
 
 menu_options = {
     1: "Tracy's Tall Trees",
@@ -8,7 +9,28 @@ menu_options = {
     3: "Suzanne's Ships",
     4: "Exit",
 }
-
+hack2Menu = {
+    1: {
+        "display":"Hack 2a (for loop)",
+        "exec": for_loop,
+        "type":"func"
+    },
+    2: {
+        "display":"Hack 2b (while loop)",
+        "exec": while_loop,
+        "type":"func"
+    },
+    3: {
+        "display":"Hack 2c (recursive)",
+        "exec": recursive_loop,
+        "type":"func"
+    },
+    4: {
+        "display":"Quit program",
+        "exec": quit,
+        "type":"func"
+    },
+}
 
 # Print menu options from dictionary key/value pair
 def main_menu():
@@ -17,7 +39,6 @@ def main_menu():
     runOptions()
 
 
-# submenus
 # menu option 1
 def trees():
     print("Welcome to Tracy's Tall Trees!")
@@ -203,7 +224,7 @@ def runOptions():
     # infinite loop to accept/process user menu choice
     while True:
         try:
-            option = int(input("Welcome to Felix's Flea Market! Where would you like to shop? "))
+            option = int(input("Welcome to Felix's Flea Market! Where would you like to shop? If you'd like to see Isabelle's other TT challenges, go to the next submenu. "))
             if option == 1:
                 trees()
             elif option == 2:

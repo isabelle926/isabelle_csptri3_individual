@@ -3,80 +3,83 @@
 InfoDb = []
 # List with dictionary records placed in a list
 InfoDb.append({
-    "FirstName": "John",
-    "LastName": "Mortensen",
-    "DOB": "October 21",
-    "Residence": "San Diego",
-    "Email": "jmortensen@powayusd.com",
-    "Owns_Cars":["2015 Fusion","2011 Ranger","2003 Excursion","1997 F-350", "1969 Cadillac"]
+    "Species": "African black-footed penguin",
+    "Conservation Status": "Endangered",
+    "Scientific Name": "Spheniscus demersus",
+    "Location": ["South Africa","Namibia"],
+    "Family": "Spheniscidae",
+    "Fun Facts":["Only penguins in Africa","Around 2 ft tall","Eats fish, squid, crustaceans"]
 })
 
 InfoDb.append({
-    "FirstName": "Sunny",
-    "LastName": "Naidu",
-    "DOB": "August 2",
-    "Residence": "San Diego",
-    "Email": "snaidu@powayusd.com",
-    "Owns_Cars":["A","B","C"]
+    "Species": "Northern rockhopper penguin",
+    "Conservation Status": "Endangered",
+    "Scientific Name": "Eudyptes moseleyi",
+    "Location": ["Tristan da Cunha","Gough Island"],
+    "Family": "Spheniscidae",
+    "Fun Facts":["One of the smallest crested penguin","Around 5 lbs","Are scrappy and pugnacious"]
+})
+
+InfoDb.append({
+    "Species": "King penguin",
+    "Conservation Status": "Least Concern",
+    "Scientific Name": "Aptenodytes patagonicus",
+    "Location": ["Falkland Islands"],
+    "Family": "Spheniscidae",
+    "Fun Facts":["Fuzzy brown chicks","Look similar to emperor penguins","Around 3 ft tall"]
+})
+
+InfoDb.append({
+    "Species": "Adélie penguin",
+    "Conservation Status": "Near Threatened",
+    "Scientific Name": "Pygoscelis adeliae",
+    "Location": ["Antartica"],
+    "Family": "Spheniscidae",
+    "Fun Facts":["Attack with their flippers","Characteristic 'tuxedo' look","Smallest penguin in Antarctica"]
 })
 
 # given an index this will print InfoDb content
 def print_data(n):
-    print(InfoDb[n]["FirstName"], InfoDb[n]["LastName"])  # using comma puts space between values
-    print("\t", "Cars: ", end="")  # \t is a tab indent, end="" make sure no return occurs
-    print(", ".join(InfoDb[n]["Owns_Cars"]))  # join allows printing a string list with separator
+    print(InfoDb[n]["Species"], InfoDb[n]["Scientific Name"])  # using comma puts space between values
+    print("\t", "Fun Facts: ", end="")  # \t is a tab indent, end="" make sure no return occurs
+    print(", ".join(InfoDb[n]["Fun Facts"]))  # join allows printing a string list with separator
     print()
 
 # Hack 2: InfoDB loops. Print values from the lists using three different ways: for, while, recursion
 ## hack 2a: def for_loop()
-## hack 2b: def while_loop(0)
-## hack 2c : def recursive_loop(0)
-
-def tester():
-    print("For loop")
-    for_loop()
-    print("While loop")
-    while_loop(0)  # requires initial index to start while
-    print("Recursive loop")
-    recursive_loop(0)  # requires initial index to start recursion
-
-# for loop iterates on length of InfoDb
 def for_loop():
-    for n in range(len(InfoDb)):
-        print_data(n)
+    for x in InfoDb:
+        for key,value in x.items():
+            print(f"{key}: {value}")
+        print()
+        print("-"*10)
+        print()
 
-# while loop contains an initial n and an index incrementing statement (n += 1)
-def while_loop(n):
-    while n < len(InfoDb):
-        print_data(n)
-        n += 1
-    return
+## hack 2b: def while_loop(0)
+def while_loop():
+    x = 0
+    while x < len(InfoDb):
+        for key,value in InfoDb[x].items():
+            print(f"{key}:{value}")
+        print()
+        print('-'*10)
+        print()
+        x += 1
 
-# recursion simulates loop incrementing on each call (n + 1) until exit condition is met
-def recursive_loop(n):
-    if n < len(InfoDb):
-        print_data(n)
-        recursive_loop(n + 1)
-    return # exit condition
-
-# Factorial of a number using recursion
-def recur_factorial(n):
-    if n == 1 or n == 0:
-        return 1
+## hack 2c : def recursive_loop(0)
+def recursive_loop():
+    n=0
+    if n>= len(InfoDb):
+        return
     else:
-        return n * recur_factorial(n-1)
-
-# this is test driver or code that plays when executed directly, versus import which will not run these statements
-def tester():
-    num = int(input("Enter a number for factorial: "))
-    # check if the number is negative
-    if num < 0:
-        print("Sorry, factorial does not exist for negative numbers")
-    else:
-        print("The factorial of", num, "is", recur_factorial(num))
+        for key,value in InfoDb[n].items():
+            print(f"{key}:{value}")
+        print()
+        print("-"*10)
+        print()
+        recursive_loop(n+1)
 
 # Hack 3: Fibonacci.  Write a recursive program to create a fibonacci sequence including error handling(with try/except) for invalid input
-
 def fibonacci():
     # Program to display the Fibonacci sequence up to n-th term
     nterms = int(input("How many terms? "))
@@ -92,7 +95,7 @@ def fibonacci():
 
         # if there is only one term, return n1
         elif nterms == 1:
-            print("Fibonacci sequence upto",nterms,":")
+            print("Fibonacci sequence up to",nterms,":")
             print(n1)
 
         # generate fibonacci sequence
@@ -108,3 +111,4 @@ def fibonacci():
                 count += 1
     except:
         print("sorry error")
+
