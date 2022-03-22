@@ -5,3 +5,5 @@
 * [5.2 Notes](tpt/5_2notes)
 * [5.3 Notes](tpt/5_3notes)
 * [5.4 Notes](tpt/5_4notes)
+* [5.5 Notes](tpt/5_5notes)
+* [5.6 Notes](tpt/5_6notes)
