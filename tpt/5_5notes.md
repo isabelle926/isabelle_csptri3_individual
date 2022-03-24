@@ -31,5 +31,5 @@ When you create a GitHub repository it requests a license type. Review the licen
     - And many more!
 
 Make a license for your personal and Team project. Document license you picked and why.
-- I am choosing the Education Community License v2.0 because it addresses the specific need of the academic community, which our project relates to
-
+- I am choosing the Education Community License v2.0 for my individual repository because it addresses the specific need of the academic community
+- Our team is choosing the MIT license because it works best for our sponsored project
