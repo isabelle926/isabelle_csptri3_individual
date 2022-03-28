@@ -2,6 +2,7 @@ from trees import christmasTrees
 from cafe import coolCafe
 from ships import coolShips
 from lists_dictionaries import InfoDb, for_loop, while_loop, recursive_loop, fibonacci
+from cool_classes import dispfac, dispSeries, superfac, printpal
 
 
 def buildMenu(menu):
@@ -52,6 +53,33 @@ tt1menu = {
     },
 }
 
+tt2menu = {
+    1: {
+        "display":"Factorial Calculator",
+        "exec": dispfac,
+        "type":"func"
+    },
+    2: {
+        "display":"Factorial series",
+        "exec": dispSeries,
+        "type":"func"
+    },
+    3: {
+        "display":"Superfactorial",
+        "exec": superfac,
+        "type":"func"
+    },
+    4: {
+        "display":"Palindrome",
+        "exec": printpal,
+        "type":"func"
+    },
+    5: {
+        "display":"Quit program",
+        "exec": quit,
+        "type":"func"
+    },
+}
 
 mainMenu = {
     1: {"display":"Tracy's Tall Trees",
@@ -66,7 +94,10 @@ mainMenu = {
     4: {"display":"TT1 Submenu ",
         "exec":tt1menu,
         "type":"func"},
-    5: {"display":"Quit Program",
+    5: {"display":"TT2 Submenu ",
+        "exec":tt2menu,
+        "type":"func"},
+    6: {"display":"Quit Program",
         "exec":quit,
         "type":"func"}
 }
