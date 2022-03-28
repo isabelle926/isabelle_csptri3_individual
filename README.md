@@ -8,6 +8,7 @@
 
 ### [Week 0 Review Ticket](https://github.com/isabelle926/isabelle_csptri3_individual/issues/1)
 ### [Week 1 Review Ticket](https://github.com/isabelle926/isabelle_csptri3_individual/issues/2)
+### [Week 2 Review Ticket](https://github.com/isabelle926/isabelle_csptri3_individual/issues/3)
 
 ## Replit Runtime:
 
