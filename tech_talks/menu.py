@@ -93,10 +93,10 @@ mainMenu = {
         "type":"func"},
     4: {"display":"TT1 Submenu ",
         "exec":tt1menu,
-        "type":"func"},
+        "type":"dict"},
     5: {"display":"TT2 Submenu ",
         "exec":tt2menu,
-        "type":"func"},
+        "type":"dict"},
     6: {"display":"Quit Program",
         "exec":quit,
         "type":"func"}
