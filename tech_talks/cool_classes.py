@@ -26,21 +26,6 @@ def dispSeries():
     fac = factorial(n)
     print(fac())
 
-    class superFactorial():
-        def __init__(self,n):
-            self.n = n
-    def factorial(self,y):
-        y = self.n if y is None else y
-        product = 1
-        for x in range(1,y+1):
-            product*=x
-        return product
-    def __call__(self):
-        product = 1
-        for x in range(1,self.n+1):
-            product*= self.factorial(x)
-        return product
-
 # Imperative Method
 def superfac():
     x = int(input("What number should we use? "))
@@ -102,3 +87,5 @@ def printpal():
         print("That is a palindrome! ")
     else:
         print("Not a palindrome")
+if __name__ == "__main__":
+    dispSeries()
