@@ -1,13 +1,15 @@
+import time
+
 def coolShips():
     print("Welcome to Suzanne's Ships!")
     print("Right now, we have a lovely sailboat in stock.")
     print("Would you like to buy it?")
     answer = input("Enter yes or no: ")
-    if answer == "yes":
+    if answer == "yes" or answer == "Yes" or answer == "y":
         print("Sure thing!")
         print("Would you like to sail it now?")
         answer2 = input("Enter yes or no: ")
-        if answer2 == "yes":
+        if answer2 == "yes" or answer2 == "Yes" or answer2 == "y":
             ANSI_CLEAR_SCREEN = u"\u001B[2J"
             ANSI_HOME_CURSOR = u"\u001B[0;0H\u001B[2"
             OCEAN_COLOR = u"\u001B[44m\u001B[2D"
@@ -48,15 +50,12 @@ def coolShips():
                     time.sleep(.1)
 
             ship()
-            exit()
-        elif answer2 == "no":
+        elif answer2 == "no" or answer2 == "No" or answer2 == "n":
             print("Alright, see you soon!")
-            exit()
         else:
             print("Please enter yes or no.")
 
-    elif answer == "no":
-        print("Goodbye")
-        exit()
+    elif answer == "no" or answer == "No" or answer == "n":
+        print("Goodbye and enjoy your purchase")
     else:
         print("Please enter yes or no.")

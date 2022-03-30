@@ -3,6 +3,8 @@ from cafe import coolCafe
 from ships import coolShips
 from lists_dictionaries import InfoDb, for_loop, while_loop, recursive_loop, fibonacci
 from cool_classes import dispfac, dispSeries, superfac, printpal
+from goodbye import goodbye
+from return_to_market import market
 
 
 def buildMenu(menu):
@@ -47,6 +49,11 @@ tt1menu = {
         "type":"func"
     },
     5: {
+        "display":"Return to Market",
+        "exec": market,
+        "type":"func"
+    },
+    6: {
         "display":"Quit program",
         "exec": quit,
         "type":"func"
@@ -75,8 +82,13 @@ tt2menu = {
         "type":"func"
     },
     5: {
+        "display":"Return to Market",
+        "exec": market,
+        "type":"func"
+    },
+    6: {
         "display":"Quit program",
-        "exec": quit,
+        "exec": goodbye,
         "type":"func"
     },
 }
@@ -105,6 +117,7 @@ mainMenu = {
 if __name__ == "__main__":
     while True: #forever loop
         presentMenu(mainMenu)
-        halt = input("Do you want to continue (y/n)? ") #checks if user wants to go again
+        halt = input("Do you want to continue shopping the Flea Market (y/n)? ") #checks if user wants to go again
         if halt.lower() == "n":
+            print("Thank you for coming")
             break

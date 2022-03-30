@@ -1,4 +1,7 @@
+# from menu import presentMenu
 import numpy as np
+
+
 def christmasTrees():
     print("Welcome to Tracy's Tall Trees!")
     print("Due to the shipment problems, all we have in stock are leftover Christmas trees.")
@@ -20,5 +23,19 @@ def christmasTrees():
         x = x + 2
         z = z - 1
         print()
-    print("Thanks for shopping with us, bye!")
-    exit()
+
+    b = input("Would you like to buy more trees? (type y or n): ")
+    if b == "y":
+        christmasTrees()
+    elif b == "n":
+        c = input("Would you like to continue touring the Flee Market? (y or n): ")
+        if c == "y":
+            print("Alright, please confirm one more time and you will continue shortly...")
+        elif c == "n":
+            print("Thanks for shopping with us, bye!")
+            exit()
+        else:
+            print("Please select a proper value next time, sending you back to Market...")
+    else:
+        print("Oh would you look at the time, it's time to close shop, see you next time!")
+        exit()
