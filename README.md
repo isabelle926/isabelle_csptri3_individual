@@ -1,3 +1,4 @@
+{% include base.html %}
 # Isabelle's personal repository for trimester 3 of CSP
 
 ### Tangibles
