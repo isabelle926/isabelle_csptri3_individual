@@ -27,7 +27,7 @@ def presentMenu(menu):
             presentMenu(menu[choice]["exec"]) #display submenu
 
 
-tt1menu = {
+InfoDb = {
     1: {
         "display":"Hack 2a (for loop)",
         "exec": for_loop,
@@ -44,23 +44,18 @@ tt1menu = {
         "type":"func"
     },
     4: {
-        "display":"Hack 3 (fibonacci)",
-        "exec": fibonacci,
-        "type":"func"
-    },
-    5: {
         "display":"Return to Market",
         "exec": market,
         "type":"func"
     },
-    6: {
+    5: {
         "display":"Quit program",
         "exec": quit,
         "type":"func"
     },
 }
 
-tt2menu = {
+Math = {
     1: {
         "display":"Factorial Calculator",
         "exec": dispfac,
@@ -82,11 +77,16 @@ tt2menu = {
         "type":"func"
     },
     5: {
+        "display":"Fibonacci",
+        "exec": fibonacci,
+        "type":"func"
+    },
+    6: {
         "display":"Return to Market",
         "exec": market,
         "type":"func"
     },
-    6: {
+    7: {
         "display":"Quit program",
         "exec": goodbye,
         "type":"func"
@@ -103,11 +103,11 @@ mainMenu = {
     3: {"display":"Suzanne's Ships",
         "exec":coolShips,
         "type":"func"},
-    4: {"display":"TT1 Submenu ",
-        "exec":tt1menu,
+    4: {"display":"Polly's Penguins",
+        "exec":InfoDb,
         "type":"dict"},
-    5: {"display":"TT2 Submenu ",
-        "exec":tt2menu,
+    5: {"display":"Fred's Fun Math and More",
+        "exec":Math,
         "type":"dict"},
     6: {"display":"Quit Program",
         "exec":quit,

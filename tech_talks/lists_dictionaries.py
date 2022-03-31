@@ -41,6 +41,10 @@ def print_data(n):
 # Hack 2: InfoDB loops. Print values from the lists using three different ways: for, while, recursion
 ## hack 2a: def for_loop()
 def for_loop():
+    print("Welcome, meet our penguins!")
+    print()
+    print("-"*10)
+    print()
     for x in InfoDb:
         for key,value in x.items():
             print(f"{key}: {value}")
@@ -51,6 +55,10 @@ def for_loop():
 
 ## hack 2b: def while_loop(0)
 def while_loop():
+    print("Welcome, meet our penguins!")
+    print()
+    print("-"*10)
+    print()
     x = 0
     while x < len(InfoDb):
         for key,value in InfoDb[x].items():
@@ -63,6 +71,10 @@ def while_loop():
 
 ## hack 2c : def recursive_loop(0)
 def recursive_loop():
+    print("Welcome, meet our penguins!")
+    print()
+    print("-"*10)
+    print()
     n = 0
     if n >= len(InfoDb):
         return
