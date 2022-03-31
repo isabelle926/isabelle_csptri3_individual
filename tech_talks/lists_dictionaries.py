@@ -1,42 +1,35 @@
 # Hack 1: InfoDB lists.  Build your own/personalized InfoDb with a list length > 3,  create list within a list as illustrated with Owns_Cars
 
-InfoDb = []
-# List with dictionary records placed in a list
-InfoDb.append({
+InfoDb = [{
     "Species": "African black-footed penguin",
     "Conservation Status": "Endangered",
     "Scientific Name": "Spheniscus demersus",
-    "Location": ["South Africa","Namibia"],
+    "Location": ["South Africa", "Namibia"],
     "Family": "Spheniscidae",
-    "Fun Facts":["Only penguins in Africa","Around 2 ft tall","Eats fish, squid, crustaceans"]
-})
-
-InfoDb.append({
+    "Fun Facts": ["Only penguins in Africa", "Around 2 ft tall", "Eats fish, squid, crustaceans"]
+}, {
     "Species": "Northern rockhopper penguin",
     "Conservation Status": "Endangered",
     "Scientific Name": "Eudyptes moseleyi",
-    "Location": ["Tristan da Cunha","Gough Island"],
+    "Location": ["Tristan da Cunha", "Gough Island"],
     "Family": "Spheniscidae",
-    "Fun Facts":["One of the smallest crested penguin","Around 5 lbs","Are scrappy and pugnacious"]
-})
-
-InfoDb.append({
+    "Fun Facts": ["One of the smallest crested penguin", "Around 5 lbs", "Are scrappy and pugnacious"]
+}, {
     "Species": "King penguin",
     "Conservation Status": "Least Concern",
     "Scientific Name": "Aptenodytes patagonicus",
     "Location": ["Falkland Islands"],
     "Family": "Spheniscidae",
-    "Fun Facts":["Fuzzy brown chicks","Look similar to emperor penguins","Around 3 ft tall"]
-})
-
-InfoDb.append({
+    "Fun Facts": ["Fuzzy brown chicks", "Look similar to emperor penguins", "Around 3 ft tall"]
+}, {
     "Species": "Adélie penguin",
     "Conservation Status": "Near Threatened",
     "Scientific Name": "Pygoscelis adeliae",
     "Location": ["Antartica"],
     "Family": "Spheniscidae",
-    "Fun Facts":["Attack with their flippers","Characteristic 'tuxedo' look","Smallest penguin in Antarctica"]
-})
+    "Fun Facts": ["Attack with their flippers", "Characteristic 'tuxedo' look", "Smallest penguin in Antarctica"]
+}]
+# List with dictionary records placed in a list
 
 # given an index this will print InfoDb content
 def print_data(n):
@@ -55,6 +48,7 @@ def for_loop():
         print("-"*10)
         print()
 
+
 ## hack 2b: def while_loop(0)
 def while_loop():
     x = 0
@@ -66,18 +60,33 @@ def while_loop():
         print()
         x += 1
 
+
 ## hack 2c : def recursive_loop(0)
 def recursive_loop():
-    n=0
-    if n>= len(InfoDb):
+    n = 0
+    if n >= len(InfoDb):
         return
     else:
-        for key,value in InfoDb[n].items():
+        for key, value in InfoDb[n].items():
             print(f"{key}:{value}")
         print()
         print("-"*10)
         print()
-        recursive_loop(n+1)
+        if n == 0:
+            y = n + 1
+            for key, value in InfoDb[y].items():
+                print(f"{key}:{value}")
+            print()
+            print("-"*10)
+            print()
+            if y == 1:
+                z = y + 1
+                for key, value in InfoDb[z].items():
+                    print(f"{key}:{value}")
+                print()
+                print("-"*10)
+                print()
+
 
 # Hack 3: Fibonacci.  Write a recursive program to create a fibonacci sequence including error handling(with try/except) for invalid input
 def fibonacci():
