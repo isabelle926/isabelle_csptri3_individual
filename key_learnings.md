@@ -3,4 +3,5 @@
 
 * [Tech Talk 0: Python Menu](tech_talks/tt0_keylearnings)
 * [Tech Talk 1: Data Structures](tech_talks/tt1_keylearnings)
+* [Tech Talk 2: Python Classes](tech_talks/tt2_keylearnings)
 
