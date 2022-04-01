@@ -31,6 +31,8 @@ InfoDb = [{
     "Fun Facts": ["Attack with their flippers", "Characteristic 'tuxedo' look", "Smallest penguin in Antarctica"]
 }]
 ```
+Dictionaries and lists within dictionaries.
+
 ### Hack 2: Loops
 For loops:
 ```python
@@ -46,6 +48,8 @@ def for_loop():
         print("-"*10)
         print()
 ```
+Prints each item until there are no more items. 
+
 While loops:
 ```python
 def while_loop():
@@ -62,6 +66,8 @@ def while_loop():
         print()
         x += 1
 ```
+Does the same thing, but the input for the while loop is different. Instead of running a certain number of times, it runs until the condition is no longer true. 
+
 Recursive loops:
 ```python
 def recursive_loop():
@@ -93,6 +99,8 @@ def recursive_loop():
                 print("-"*10)
                 print()
 ```
+Recursive loops are for loops within for loops. 
+
 ### Hack 3: Fibonacci
 ```python
 def fibonacci():
@@ -127,3 +135,4 @@ def fibonacci():
     except:
         print("sorry error")
 ```
+Asks the user to choose a number, then prints out all fibonacci numbers in that series. Uses try/except format to handle potential errors. 

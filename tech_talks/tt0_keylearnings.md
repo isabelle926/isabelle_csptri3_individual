@@ -118,6 +118,8 @@ def presentMenu(menu):
         else:
             presentMenu(menu[choice]["exec"]) #display submenu
 ```
+The program either displays text, runs a program, or shows another dictionary based on the key of each value. 
+
 Christmas tree + keypad code: 
 ```python
 def christmasTrees():
@@ -142,6 +144,8 @@ def christmasTrees():
         z = z - 1
         print()
 ```
+The first lines print a matrix. The next lines ask for user input, then constructs a Christmas tree in which each line has more characters than the last. 
+
 Animations:
 ```python
 def coffee():
