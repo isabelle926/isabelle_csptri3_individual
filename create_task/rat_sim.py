@@ -173,12 +173,12 @@ def main():
             rat["health"] += 10
 
         # conditionals that will end the game
-        if money < 0:
+        if money == 0:
             print("You are broke! Your rat has left you for someone richer. ")
-            quit
+            quit()
         elif rat["health"] <= 0:
             print("Your rat has died! Maybe try taking care of a plant first.")
-            quit
+            quit()
 
         printStatus()
         print()

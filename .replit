@@ -1,2 +1,2 @@
 language = "bash"
-run = "python tech_talks/menu.py"
+run = "python create_task/rat_sim.py"
