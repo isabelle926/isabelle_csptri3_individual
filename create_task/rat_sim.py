@@ -46,16 +46,16 @@ def printMenu(menuOptions):
 def feedRat():
     # define money as a global variable so it can be used within functions
     global money
-    if rat["hunger"] >= 0:
+    if rat["hunger"] <= 0:
         print("Your rat is already full! Returning to menu")
     else:
         choice = input(
-            "Would you like to spend 10 dollars to feed your rat? You have " + str(money) + " dollars. (y/n) ")
+            "Would you like to spend 15 dollars to feed your rat? You have " + str(money) + " dollars. (y/n) ")
         # define money as a global variable so that it can be used inside functions
         if choice == "yes" or "y":
             money -= 15
-            rat["hunger"] -= 20
-            print("Fed your rat! Hunger has decreased by 20. ")
+            rat["hunger"] -= 30
+            print("Fed your rat! Hunger has decreased by 30. ")
         else:
             print("Returning to menu")
 
@@ -66,16 +66,19 @@ def play():
         print("You have no toys.")
     else:
         print("Here are the toys you have: ")
+        toyChoice = ""
         while toyChoice not in rat["toys"]:
             for toy in rat["toys"]:
                 print(toy)
             toyChoice = input("Which toy would you like to play with? ")
-        rat["happiness"] += 20
-        print(rat["name"] + " had a great time playing with the " + toyChoice + "! increased happiness by 20.")
+        rat["happiness"] += 30
+        print(rat["name"] + " had a great time playing with the " + toyChoice + "! Increased happiness by 30.")
 
 
 # purchase new toys
 def buyToys():
+    # define money as a global variable (again)
+    global money
     print("Your " + rat["type"] + " " + rat["name"] + " deserves a treat for putting up with you! Let's get a new toy!")
     print("Here we have some toys that our researchers have chosen specifically for your breed of rat.")
     moneyChoice = input("By the way, toys cost 100 dollars each. Do you still want to buy one? (y/n)")
@@ -104,22 +107,34 @@ def buyToys():
 
 # print status of the rat
 def printStatus():
+    # once again, money needs to be a global variable
+    global money
+
     # conditional statements that print different statements using AND operators
     if rat["hunger"] < 50 & rat["health"] > 50 & rat["happiness"] > 50:
         print("Your " + rat["type"] + " " + rat["name"] + " is doing great!")
     else:
-        print("Uh oh, your" + rat["type"] + rat["name"] + "isn't doing so well.")
-    print("Your rat currently has: " + str(len(rat["toys"])) + "toys, which are: ")
+        print("Uh oh, your " + rat["type"] +" " + rat["name"] + " isn't doing so well.")
+    time.sleep(2)
+    print("Your rat currently has: " + str(len(rat["toys"])) + " toys, which are: ")
     for toy in rat["toys"]:
         print(toy)
+    time.sleep(2)
     print("Your pet currently has a hunger level of " + str(rat["hunger"]) + ".")
+    time.sleep(2)
     print("Your pet currently has a health level of " + str(rat["health"]) + ".")
+    time.sleep(2)
     print("Your pet currently has a happiness level of " + str(rat["happiness"]) + ".")
-    print("Your pet is " + str(rat["age"]) + "days old.")
+    time.sleep(2)
+    print("Your pet is " + str(rat["age"]) + " days old.")
+    time.sleep(2)
+    print("You have " + str(money) + " dollars")
 
 
 # main
 def main():
+    # don't forget to make sure money is a global variable!
+    global money
     # start game
     initSim()
 
@@ -128,6 +143,8 @@ def main():
               "desc": "Feed " + rat["name"]},
         "P": {"func": play,
               "desc": "Play with " + rat["name"]},
+        "B": {"func": buyToys,
+              "desc": "Buy toys for " + rat["name"]},
         "Q": {"func": quit,
               "desc": "Quit Program"}
     }
@@ -146,9 +163,8 @@ def main():
         rat["age"] += 1
         rat["happiness"] -= 10
 
-        # increases user money over time
-        time.sleep(60)
-        money += 15
+        # increases user money
+        money += 70
 
         # more conditionals
         if rat["hunger"] > 40 or rat["happiness"] < 40:
