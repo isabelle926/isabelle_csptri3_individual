@@ -111,24 +111,25 @@ def printStatus():
     global money
 
     # conditional statements that print different statements using AND operators
-    if rat["hunger"] < 50 & rat["health"] > 50 & rat["happiness"] > 50:
+    if rat["hunger"] < 50 and rat["health"] > 50 and rat["happiness"] > 50:
         print("Your " + rat["type"] + " " + rat["name"] + " is doing great!")
     else:
         print("Uh oh, your " + rat["type"] +" " + rat["name"] + " isn't doing so well.")
-    time.sleep(2)
+    time.sleep(1)
     print("Your rat currently has: " + str(len(rat["toys"])) + " toys, which are: ")
     for toy in rat["toys"]:
         print(toy)
-    time.sleep(2)
+    time.sleep(1)
     print("Your pet currently has a hunger level of " + str(rat["hunger"]) + ".")
-    time.sleep(2)
+    time.sleep(1)
     print("Your pet currently has a health level of " + str(rat["health"]) + ".")
-    time.sleep(2)
+    time.sleep(1)
     print("Your pet currently has a happiness level of " + str(rat["happiness"]) + ".")
-    time.sleep(2)
+    time.sleep(1)
     print("Your pet is " + str(rat["age"]) + " days old.")
-    time.sleep(2)
+    time.sleep(1)
     print("You have " + str(money) + " dollars")
+    time.sleep(1)
 
 
 # main
@@ -169,7 +170,7 @@ def main():
         # more conditionals
         if rat["hunger"] > 40 or rat["happiness"] < 40:
             rat["health"] -= 10
-        elif rat["hunger"] < 30 & rat["happiness"] > 50:
+        elif rat["hunger"] < 30 and rat["happiness"] > 50:
             rat["health"] += 10
 
         # conditionals that will end the game
