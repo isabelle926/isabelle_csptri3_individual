@@ -195,7 +195,8 @@ def main():
         elif rat["health"] <= 0:
             print("Your rat has died! Maybe try taking care of a plant first.")
             quit()
-
+        
+        print("Another day has passed. ")
         printStatus()
         print()
 ```
@@ -219,3 +220,4 @@ _Approx. 200 words (for all subparts of 3d combined)_
 
 ### i. Describes two calls to the procedure identified in written response 3c. Each call must pass a different argument(s) that causes a different segment of code in the algorithm to execute. 
 ### First call:
+
