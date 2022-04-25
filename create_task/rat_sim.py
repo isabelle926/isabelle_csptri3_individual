@@ -63,7 +63,11 @@ def feedRat():
 # play with toys
 def play():
     if len(rat["toys"]) == 0:
-        print("You have no toys.")
+      buyChoice = input("You have no toys. Would you like to buy some? (y/n) ")
+      if buyChoice == "y" or "yes" or "Y" or "Yes":
+        buyToys()
+      else:
+        print("Seeya later.")
     else:
         print("Here are the toys you have: ")
         toyChoice = ""
@@ -81,6 +85,7 @@ def buyToys():
     global money
     print("Your " + rat["type"] + " " + rat["name"] + " deserves a treat for putting up with you! Let's get a new toy!")
     print("Here we have some toys that our researchers have chosen specifically for your breed of rat.")
+    # ask users if they wish to continue
     moneyChoice = input("By the way, toys cost 100 dollars each. Do you still want to buy one? (y/n)")
     if moneyChoice == "yes" or "y" or "Y":
         print("Alright, here are your choices: ")
@@ -149,6 +154,7 @@ def main():
         "Q": {"func": quit,
               "desc": "Quit Program"}
     }
+
     keepPlaying = True
     while keepPlaying:
         menuSelection = ""
