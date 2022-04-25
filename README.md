@@ -9,7 +9,9 @@
 ### [Week 1 Review Ticket](https://github.com/isabelle926/isabelle_csptri3_individual/issues/2)
 ### [Week 2 Review Ticket](https://github.com/isabelle926/isabelle_csptri3_individual/issues/3)
 ### [Week 3 Review Ticket](https://github.com/isabelle926/isabelle_csptri3_individual/issues/4)
-
 ### [Algorithmic Final](tech_talks/algorithmic_final)
+### [Week 4 Review Ticket](https://github.com/isabelle926/isabelle_csptri3_individual/issues/5)
+### [Week 5 Review Ticket](https://github.com/isabelle926/isabelle_csptri3_individual/issues/6)
+
 ## Replit Runtime:
 <iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@IsabelleGunawa1/isabellecsptri3individual?embed=true"></iframe>
