@@ -77,6 +77,7 @@ def play():
                 print(toy)
             toyChoice = input("Which toy would you like to play with? ")
         playToy(toyChoice)
+        time.sleep(1)
         rat["happiness"] += 30
         print(rat["name"] + " had a great time playing with the " + toyChoice + "! Increased happiness by 30.")
 
@@ -160,6 +161,7 @@ def buyToys():
         playChoice = input("Would you like to play with the toy now? (y/n) ")
         if playChoice == "y" or "Y" or "yes" or "Yes":
             playToy(chosenToy)
+            time.sleep(1)
         else:
             print("Goodbye. ")
     else:
