@@ -1,5 +1,6 @@
 # imports
 import time
+import random as rand
 
 # rat dictionary
 rat = {"name": "", "type": "", "age": 0, "hunger": 0, "health": 50, "happiness": 50, "toys": []}
@@ -63,11 +64,11 @@ def feedRat():
 # play with toys
 def play():
     if len(rat["toys"]) == 0:
-      buyChoice = input("You have no toys. Would you like to buy some? (y/n) ")
-      if buyChoice == "y" or "yes" or "Y" or "Yes":
-        buyToys()
-      else:
-        print("Seeya later.")
+        buyChoice = input("You have no toys. Would you like to buy some? (y/n) ")
+        if buyChoice == "y" or "yes" or "Y" or "Yes":
+            buyToys()
+        else:
+            print("Seeya later.")
     else:
         print("Here are the toys you have: ")
         toyChoice = ""
@@ -75,8 +76,58 @@ def play():
             for toy in rat["toys"]:
                 print(toy)
             toyChoice = input("Which toy would you like to play with? ")
+        playToy(toyChoice)
         rat["happiness"] += 30
         print(rat["name"] + " had a great time playing with the " + toyChoice + "! Increased happiness by 30.")
+
+
+def playToy(toy):
+    if toy == "cardboard tube" or "string" or "exercise wheel" or "empty gatorade bottle":
+        print("Your rat feels like exercising. Let's play a game while we wait! ")
+        randomnum = rand.randint(1, 100)
+        print("Guess a number between 1 and 100")
+        while True:
+            guess = int(input())
+            if guess < randomnum:
+                print("Too low")
+            elif guess > randomnum:
+                print("Too high")
+            else:
+                print("That's right!")
+                break
+    elif toy == "hammock" or "rawhide" or "apple stick" or "dollhouse":
+        print("Let's play with your rat! ")
+        rps_list = ["rock", "paper", "scissors"]
+        rat_choice = rand.randint(rps_list)
+        while rpsChoice not in rps_list:
+            rpsChoice = input("Choose rock, paper, or scissors: ").lower()
+        print("You chose " + rpsChoice + ", " + rat["name"] + " chose " + rat_choice)
+        if rpsChoice == rat_choice:
+            print("You both selected " + rpsChoice + ". It's a tie!")
+        elif rpsChoice == "rock":
+            if rat_choice == "scissors":
+                print("Rock smashes scissors! You win!")
+            else:
+                print("Paper covers rock! You lose.")
+        elif rpsChoice == "paper":
+            if rat_choice == "rock":
+                print("Paper covers rock! You win!")
+            else:
+                print("Scissors cuts paper! You lose.")
+        elif rpsChoice == "scissors":
+            if rat_choice == "paper":
+                print("Scissors cuts paper! You win!")
+            else:
+                print("Rock smashes scissors! You lose.")
+    else:
+        print("Your rat wants to go on an adventure: ")
+        place = input("Enter a place: ")
+        noun = input("Enter a plural noun: ")
+        food = input("Enter a food: ")
+        verb = input("Enter a verb ending in 'ing': ")
+        print("One day, " + rat[
+            "name"] + " ventured off to " + place + " to search for some " + noun + ". However, after " + verb + " for so long, " +
+              rat["name"] + " became tired and started eating some " + food)
 
 
 # purchase new toys
@@ -106,6 +157,11 @@ def buyToys():
         rat["toys"].append(chosenToy)
         money -= 100
         print("Good choice. I think " + rat["name"] + " will enjoy playing with the " + chosenToy)
+        playChoice = input("Would you like to play with the toy now? (y/n) ")
+        if playChoice == "y" or "Y" or "yes" or "Yes":
+            playToy(chosenToy)
+        else:
+            print("Goodbye. ")
     else:
         print("Goodbye cheapskate.")
 
@@ -119,7 +175,7 @@ def printStatus():
     if rat["hunger"] < 50 and rat["health"] > 50 and rat["happiness"] > 50:
         print("Your " + rat["type"] + " " + rat["name"] + " is doing great!")
     else:
-        print("Uh oh, your " + rat["type"] +" " + rat["name"] + " isn't doing so well.")
+        print("Uh oh, your " + rat["type"] + " " + rat["name"] + " isn't doing so well.")
     time.sleep(1)
     print("Your rat currently has: " + str(len(rat["toys"])) + " toys, which are: ")
     for toy in rat["toys"]:
