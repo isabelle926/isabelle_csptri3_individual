@@ -1,6 +1,7 @@
 {% include nav.html %}
 
 # TPT Home - Isabelle
+* [Test Corrections](test_correct)
 * [5.1 Notes](tpt/5_1notes)
 * [5.2 Notes](tpt/5_2notes)
 * [5.3 Notes](tpt/5_3notes)
