@@ -202,6 +202,7 @@ def play():
 ### iii. Describes in general what the identified procedure does and how it contributes to the overall functionality of the program
 The identified procedure allows the user to play minigames depending on what toy they choose to use. 
 This allows for more engagement with the game and makes it more "fun." 
+The "sequencing" is the order in which each line is executed so that the program is sensible and usable, the "selection" is the program that is played based on user choice, and the "iteration" is the while loop that plays until the user makes a choice. 
 
 ### iv. Explains in detailed steps how the algorithm implemented in the identified procedure works. Your explanation must be detailed enough for someone else to recreate it. 
 First, the procedure asks the user to choose a toy to play with. Depending on what rat the user initially chose, they will have different options. 
