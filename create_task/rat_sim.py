@@ -63,6 +63,7 @@ def feedRat():
 
 # play with toys
 def play():
+    # prompt user to buy toys if they don't have any
     if len(rat["toys"]) == 0:
         buyChoice = input("You have no toys. Would you like to buy some? (y/n) ")
         if buyChoice == "y" or "yes" or "Y" or "Yes":
@@ -83,23 +84,11 @@ def play():
 
 
 def playToy(toy):
-    if toy == "cardboard tube" or "string" or "exercise wheel" or "empty gatorade bottle":
-        print("Your rat feels like exercising. Let's play a game while we wait! ")
-        randomnum = rand.randint(1, 100)
-        print("Guess a number between 1 and 100")
-        while True:
-            guess = int(input())
-            if guess < randomnum:
-                print("Too low")
-            elif guess > randomnum:
-                print("Too high")
-            else:
-                print("That's right!")
-                break
-    elif toy == "hammock" or "rawhide" or "apple stick" or "dollhouse":
+    if toy.lower() == "hammock" or "rawhide" or "apple stick" or "dollhouse":
         print("Let's play with your rat! ")
         rps_list = ["rock", "paper", "scissors"]
-        rat_choice = rand.randint(rps_list)
+        rat_choice = rand.choice(rps_list)
+        rpsChoice = ""
         while rpsChoice not in rps_list:
             rpsChoice = input("Choose rock, paper, or scissors: ").lower()
         print("You chose " + rpsChoice + ", " + rat["name"] + " chose " + rat_choice)
@@ -120,6 +109,20 @@ def playToy(toy):
                 print("Scissors cuts paper! You win!")
             else:
                 print("Rock smashes scissors! You lose.")
+
+    elif toy.lower() == "cardboard tube" or "string" or "exercise wheel" or "empty gatorade bottle":
+        print("Your rat feels like exercising. Let's play a game while we wait! ")
+        randomnum = rand.randint(1, 100)
+        print("Guess a number between 1 and 100")
+        while True:
+            guess = int(input())
+            if guess < randomnum:
+                print("Too low")
+            elif guess > randomnum:
+                print("Too high")
+            else:
+                print("That's right!")
+                break
     else:
         print("Your rat wants to go on an adventure: ")
         place = input("Enter a place: ")
@@ -139,10 +142,13 @@ def buyToys():
     print("Here we have some toys that our researchers have chosen specifically for your breed of rat.")
     # ask users if they wish to continue
     moneyChoice = input("By the way, toys cost 100 dollars each. Do you still want to buy one? (y/n)")
-    if moneyChoice == "yes" or "y" or "Y":
+
+    if moneyChoice.lower() == "n":
+        print("Goodbye. ")
+    else:
+        # if moneyChoice == "yes" or "y" or "Y":
         print("Alright, here are your choices: ")
         toyOption = ratToys[rat["type"]]
-        print(toyOption)
 
         # user choice
         toyNum = -1
@@ -164,8 +170,8 @@ def buyToys():
             time.sleep(1)
         else:
             print("Goodbye. ")
-    else:
-        print("Goodbye cheapskate.")
+    # else:
+    # print("Goodbye cheapskate.")
 
 
 # print status of the rat
