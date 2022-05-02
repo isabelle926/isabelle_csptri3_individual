@@ -122,6 +122,7 @@ _Approx. 200 words (for all subparts of 3c combined, exclusive of program code)_
 - [x] Defines the procedure's name and return type (if necessary)
 - [x] Contains and uses one or more parameters that have an effect on the functionality of the procedure
 - [x] Implements an algorithm that includes sequencing, selection, and iteration
+
 ```python
 def playToy(toy):
     if toy.lower() == "hammock" or "rawhide" or "apple stick" or "dollhouse":
@@ -172,7 +173,6 @@ def playToy(toy):
         print("One day, " + rat[
             "name"] + " ventured off to " + place + " to search for some " + noun + ". However, after " + verb + " for so long, " +
               rat["name"] + " became tired and started eating some " + food)
-
 ```
 
 ### ii. The second program code segment must show where your student-developed procedure is being called in your program
