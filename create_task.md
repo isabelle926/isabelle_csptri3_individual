@@ -1,6 +1,13 @@
 {% include nav.html %}
 
 # Create Task Plan
+## Video
+
+
+https://user-images.githubusercontent.com/70926137/166344935-a8e5cdba-c7dd-40fe-b2cc-e7c827e1a5ca.mp4
+
+## Written Responses
+
 ## 3a. Provide a written response that does all three of the following:
 _Approx. 150 words (for all subparts of 3a combined)_
 ### i. Describes the overall purpose of the program
